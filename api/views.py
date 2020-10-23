@@ -30,4 +30,4 @@ class HelloViewset(viewsets.ViewSet):
             'it supports the method such as list,create,retrive,partiali_update,destriy',
             'it support CRUD operation'
         ]
-        return HttpResponse({'message':message})
+        return HttpResponse({'message':"message"})
