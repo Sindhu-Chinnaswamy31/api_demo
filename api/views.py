@@ -8,3 +8,15 @@ class SampleApiView(APIView):
     def get(self,request,format=None):
         #always resposne should be in the form of dictionary
         return Response({'name':"SampleAPIView",'message':"Hello world"})
+
+    def post(self,request,format=None):
+        return Response({'name':"SampleAPIView",'message':"POST"})
+
+    def put(self,request,format=None):
+        return Response({'name':"SampleAPIView",'message':"PUT"})
+
+    def patch(self,request,format=None):
+        return Response({'name':"SampleAPIView",'message':"PATCH"})
+
+    def delete(self,request,format=None):
+        return Response({'name':"SampleAPIView",'message':"DELETE"})
