@@ -1,6 +1,9 @@
+from django.http import HttpResponse
 from rest_framework.views import APIView
 #response will be given from Response function
-from rest_framework.response import Response
+
+from rest_framework import viewsets
+
 
 # Create your views here.
 class SampleApiView(APIView):
@@ -20,3 +23,11 @@ class SampleApiView(APIView):
 
     def delete(self,request,format=None):
         return Response({'name':"SampleAPIView",'message':"DELETE"})
+
+class HelloViewset(viewsets.ViewSet):
+    def list(self,request):
+        message=[
+            'it supports the method such as list,create,retrive,partiali_update,destriy',
+            'it support CRUD operation'
+        ]
+        return HttpResponse({'message':message})
